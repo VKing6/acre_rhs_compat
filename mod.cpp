@@ -9,7 +9,7 @@ name = "ACRE2 RHS Compatibility";
 /// When the mouse is over, in the main menu
 //logoOver = ".paa";
 /// Website URL, that can accessed from the expansions menu
-//action = "https://github.com/VKing6/";
+action = "https://github.com/VKing6/acre_rhs_compat";
 /// Overview text, displayed from the extension menu
 overview = "ACRE2 compatibility mod for RHS vehicles";
 author = "VKing";
