@@ -279,7 +279,7 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_intercom;
                 shortName = $STR_ACRE_sys_intercom_intercom;
-                allowedPositions[] = {"crew", {"cargo", 0}};
+                allowedPositions[] = {"crew"};
                 limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
                 numLimitedPositions = 12;
                 connectedByDefault = 1;
@@ -338,7 +338,7 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_intercom;
                 shortName = $STR_ACRE_sys_intercom_intercom;
-                allowedPositions[] = {"crew", {"cargo", 0}};
+                allowedPositions[] = {"crew"};
                 limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
                 numLimitedPositions = 12;
                 connectedByDefault = 1;
@@ -367,7 +367,7 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_intercom;
                 shortName = $STR_ACRE_sys_intercom_intercom;
-                allowedPositions[] = {"crew", {"cargo", 0}};
+                allowedPositions[] = {"crew"};
                 limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
                 numLimitedPositions = 12;
                 connectedByDefault = 1;
@@ -415,7 +415,7 @@ class CfgVehicles {
                 shortName = "Upper";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {{"cargo", 1}, {"ffv", {0}}};
+                allowedPositions[] = {{"cargo", 0, 1}, {"ffv", {0}}};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2: Rack_1 {
@@ -427,10 +427,10 @@ class CfgVehicles {
     class rhsusf_M1239_CROWS_base: rhsusf_M1239_base {
         class AcreRacks: AcreRacks {
             class Rack_1: Rack_1 {
-                allowedPositions[] = {"gunner", {"cargo", 1}};
+                allowedPositions[] = {"gunner", {"cargo", 0, 1}};
             };
             class Rack_2: Rack_2 {
-                allowedPositions[] = {"gunner", {"cargo", 1}};
+                allowedPositions[] = {"gunner", {"cargo", 0, 1}};
             };
         };
     };
@@ -492,12 +492,131 @@ class CfgVehicles {
         };
     };
 
+    // Cougar MRAP (CAT 1)
+    class rhsusf_Cougar_base: MRAP_01_base_F {
+        class AcreIntercoms {
+            class CrewIntercom {
+                displayName = $STR_ACRE_sys_intercom_intercom;
+                shortName = $STR_ACRE_sys_intercom_intercom;
+                allowedPositions[] = {"crew"};
+                limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
+                numLimitedPositions = 12;
+                connectedByDefault = 1;
+            };
+        };
+        class AcreRacks {
+            class Rack_1 {
+                displayName = "Upper Radio";
+                shortName = "Upper";
+                componentName = "ACRE_VRC110";
+                mountedRadio = "ACRE_PRC152";
+                allowedPositions[] = {{"cargo", 0, 4}};
+                intercom[] = {"CrewIntercom"};
+            };
+            class Rack_2: Rack_1 {
+                displayName = "Lower Radio";
+                shortName = "Lower";
+            };
+        };
+    };
+
     // MRZR4
     class rhsusf_mrzr_base: MRAP_01_base_F {
         class AcreIntercoms {};
         class AcreRacks {};
     };
 
+    // HMMWV
+    class rhsusf_hmmwe_base: MRAP_01_base_F {
+        class AcreIntercoms {};
+        class AcreRacks {};
+    };
+
+    // M142 HIMARS
+    class rhsusf_himars_base: Truck_01_base_F {
+        class AcreIntercoms {
+            class CrewIntercom {
+                displayName = $STR_ACRE_sys_intercom_crewIntercom;
+                shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
+                allowedPositions[] = {"crew", {"cargo", "all"}, {"ffv", "all"}};
+                connectedByDefault = 1;
+            };
+        };
+        class AcreRacks {
+            class Rack_1 {
+                displayName = "Upper Radio";
+                shortName = "Upper";
+                componentName = "ACRE_VRC103";
+                mountedRadio = "ACRE_PRC117F";
+                allowedPositions[] = {"crew", {"cargo", "all"}, {"ffv", "all"}};
+                intercom[] = {"CrewIntercom"};
+            };
+            class Rack_2: Rack_1 {
+                displayName = "Lower Radio";
+                shortName = "Lower";
+            };
+        };
+    };
+
+    // M109
+    class MBT_01_arty_base_F;
+    class rhsusf_m109tank_base: MBT_01_arty_base_F {
+        class AcreIntercoms {
+            class CrewIntercom {
+                displayName = $STR_ACRE_sys_intercom_crewIntercom;
+                shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
+                allowedPositions[] = {"crew"};
+                connectedByDefault = 1;
+            };
+        };
+        class AcreRacks {
+            class Rack_1 {
+                displayName = "Upper Radio";
+                shortName = "Upper";
+                componentName = "ACRE_VRC103";
+                mountedRadio = "ACRE_PRC117F";
+                allowedPositions[] = {"gunner", "commander"};
+                intercom[] = {"CrewIntercom"};
+            };
+            class Rack_2: Rack_1 {
+                displayName = "Lower Radio";
+                shortName = "Lower";
+            };
+        };
+    };
+
+
+    // Mk V Special Operations Craft
+    class RHS_Ship;
+    class rhsusf_mkvsoc: RHS_Ship {
+        class AcreIntercoms {
+            class CrewIntercom {
+                displayName = $STR_ACRE_sys_intercom_crewIntercom;
+                shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
+                allowedPositions[] = {"crew"};
+                connectedByDefault = 1;
+            };
+            class PaxIntercom {
+                displayName = $STR_ACRE_sys_intercom_passengerIntercom;
+                shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
+                allowedPositions[] = {"crew", {"cargo", "all"}};
+            };
+        };
+        class AcreRacks {
+            class Rack_1 {
+                displayName = "Upper Radio";
+                shortName = "Upper";
+                componentName = "ACRE_VRC103";
+                mountedRadio = "ACRE_PRC117F";
+                allowedPositions[] = {"driver", "commander", {"turret", {5}}};
+                intercom[] = {"CrewIntercom"};
+            };
+            class Rack_2: Rack_1 {
+                displayName = "Lower Radio";
+                shortName = "Lower";
+            };
+        };
+    };
 
 
     // UH-60
