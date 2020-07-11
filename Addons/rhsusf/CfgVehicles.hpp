@@ -279,7 +279,7 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_intercom;
                 shortName = $STR_ACRE_sys_intercom_intercom;
-                allowedPositions[] = {"crew"};
+                allowedPositions[] = {"crew", {"cargo", 0}};
                 limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
                 numLimitedPositions = 12;
                 connectedByDefault = 1;
@@ -300,9 +300,15 @@ class CfgVehicles {
             };
         };
     };
+    // CROWS
     class rhsusf_caiman_GPK_base: rhsusf_caiman_base {};
     class rhsusf_M1220_M2_usarmy_d: rhsusf_caiman_GPK_base {};
     class rhsusf_M1220_M153_M2_usarmy_d: rhsusf_M1220_M2_usarmy_d {
+        class AcreIntercoms: AcreIntercoms {
+            class CrewIntercom: CrewIntercom {
+                allowedPositions[] = {"crew"};
+            };
+        };
         class AcreRacks: AcreRacks {
             class Rack_1: Rack_1 {
                 allowedPositions[] = {"driver", "gunner", {"cargo", 0, 7}};
@@ -312,6 +318,7 @@ class CfgVehicles {
             };
         };
     };
+    // Ambulance
     class rhsusf_M1220_usarmy_d: rhsusf_caiman_base {};
     class rhsusf_M1230a1_usarmy_d: rhsusf_M1220_usarmy_d {
         class AcreRacks: AcreRacks {
@@ -324,6 +331,35 @@ class CfgVehicles {
         };
     };
 
+    // RG-33L MRAP (M1232/M1237)
+    class MRAP_01_base_F;
+    class rhsusf_RG33L_base: MRAP_01_base_F {
+        class AcreIntercoms {
+            class CrewIntercom {
+                displayName = $STR_ACRE_sys_intercom_intercom;
+                shortName = $STR_ACRE_sys_intercom_intercom;
+                allowedPositions[] = {"crew", {"cargo", 0}};
+                limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
+                numLimitedPositions = 12;
+                connectedByDefault = 1;
+            };
+        };
+        class AcreRacks {
+            class Rack_1 {
+                displayName = "Upper Radio";
+                shortName = "Upper";
+                componentName = "ACRE_VRC103";
+                mountedRadio = "ACRE_PRC117F";
+                allowedPositions[] = {"driver", {"cargo", 0}};
+                intercom[] = {"CrewIntercom"};
+            };
+            class Rack_2: Rack_1 {
+                displayName = "Lower Radio";
+                shortName = "Lower";
+            };
+        };
+    };
+
     // RG-33 MRAP (M1238)
     class MRAP_01_base_F;
     class rhsusf_RG33_base: MRAP_01_base_F {
@@ -331,7 +367,7 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_intercom;
                 shortName = $STR_ACRE_sys_intercom_intercom;
-                allowedPositions[] = {"crew"};
+                allowedPositions[] = {"crew", {"cargo", 0}};
                 limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
                 numLimitedPositions = 12;
                 connectedByDefault = 1;
@@ -363,44 +399,13 @@ class CfgVehicles {
         };
     };
 
-    // RG-33L MRAP (M1232/M1237)
-    class MRAP_01_base_F;
-    class rhsusf_RG33L_base: MRAP_01_base_F {
-        class AcreIntercoms {
-            class CrewIntercom {
-                displayName = $STR_ACRE_sys_intercom_intercom;
-                shortName = $STR_ACRE_sys_intercom_intercom;
-                allowedPositions[] = {"crew"};
-                limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
-                numLimitedPositions = 12;
-                connectedByDefault = 1;
-            };
-        };
-        class AcreRacks {
-            class Rack_1 {
-                displayName = "Upper Radio";
-                shortName = "Upper";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"crew", {"cargo", 0}};
-                intercom[] = {"CrewIntercom"};
-            };
-            class Rack_2: Rack_1 {
-                displayName = "Lower Radio";
-                shortName = "Lower";
-            };
-        };
-    };
-
     // RG-33L M1239
     class rhsusf_M1239_base: MRAP_01_base_F {
         class AcreIntercoms {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_intercom;
                 shortName = $STR_ACRE_sys_intercom_intercom;
-                allowedPositions[] = {"crew"};
-                limitedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
-                numLimitedPositions = 12;
+                allowedPositions[] = {"crew", {"cargo", "all"}, {"ffv", "all"}};
                 connectedByDefault = 1;
             };
         };
