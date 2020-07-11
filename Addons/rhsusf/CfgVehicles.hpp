@@ -323,7 +323,7 @@ class CfgVehicles {
                 shortName = "Upper";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {"driver", {"cargo", 0, 1, 8}};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2 {
@@ -331,8 +331,31 @@ class CfgVehicles {
                 shortName = "Lower";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {"driver", {"cargo", 0, 1, 8}};
                 intercom[] = {"CrewIntercom"};
+            };
+        };
+    };
+    class rhsusf_caiman_GPK_base: rhsusf_caiman_base {};
+    class rhsusf_M1220_M2_usarmy_d: rhsusf_caiman_GPK_base {};
+    class rhsusf_M1220_M153_M2_usarmy_d: rhsusf_M1220_M2_usarmy_d {
+        class AcreRacks: AcreRacks {
+            class Rack_1: Rack_1 {
+                allowedPositions[] = {"driver", "gunner", {"cargo", 0, 7}};
+            };
+            class Rack_2: Rack_2 {
+                allowedPositions[] = {"driver", "gunner", {"cargo", 0, 7}};
+            };
+        };
+    };
+    class rhsusf_M1220_usarmy_d: rhsusf_caiman_base {};
+    class rhsusf_M1230a1_usarmy_d: rhsusf_M1220_usarmy_d {
+        class AcreRacks: AcreRacks {
+            class Rack_1: Rack_1 {
+                allowedPositions[] = {"driver", {"cargo", 0}};
+            };
+            class Rack_2: Rack_2 {
+                allowedPositions[] = {"driver", {"cargo", 0}};
             };
         };
     };
@@ -356,7 +379,7 @@ class CfgVehicles {
                 shortName = "Upper";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {"crew", {"cargo", 0, 1, 4}};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2 {
@@ -364,11 +387,22 @@ class CfgVehicles {
                 shortName = "Lower";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {"crew", {"cargo", 0, 1, 4}};
                 intercom[] = {"CrewIntercom"};
             };
         };
     };
+    class rhsusf_RG33_CROWS_base: rhsusf_RG33_base {
+        class AcreRacks: AcreRacks {
+            class Rack_1: Rack_1 {
+                allowedPositions[] = {"crew", {"cargo", 0, 3}};
+            };
+            class Rack_2: Rack_2 {
+                allowedPositions[] = {"crew", {"cargo", 0, 3}};
+            };
+        };
+    };
+
     // RG-33L MRAP (M1232/M1237)
     class MRAP_01_base_F;
     class rhsusf_RG33L_base: MRAP_01_base_F {
@@ -388,7 +422,7 @@ class CfgVehicles {
                 shortName = "Upper";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {"crew", {"cargo", 0}};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2 {
@@ -396,11 +430,12 @@ class CfgVehicles {
                 shortName = "Lower";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {"crew", {"cargo", 0}};
                 intercom[] = {"CrewIntercom"};
             };
         };
     };
+
     // RG-33L M1239
     class rhsusf_M1239_base: MRAP_01_base_F {
         class AcreIntercoms {
@@ -419,7 +454,7 @@ class CfgVehicles {
                 shortName = "Upper";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {{"cargo", 1}, {"ffv", {0}}};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2 {
@@ -427,8 +462,18 @@ class CfgVehicles {
                 shortName = "Lower";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"inside"};
+                allowedPositions[] = {{"cargo", 1}, {"ffv", {0}}};
                 intercom[] = {"CrewIntercom"};
+            };
+        };
+    };
+    class rhsusf_M1239_CROWS_base: rhsusf_M1239_base {
+        class AcreRacks: AcreRacks {
+            class Rack_1: Rack_1 {
+                allowedPositions[] = {"gunner", {"cargo", 1}};
+            };
+            class Rack_2: Rack_2 {
+                allowedPositions[] = {"gunner", {"cargo", 1}};
             };
         };
     };
@@ -449,7 +494,7 @@ class CfgVehicles {
                 shortName = "Upper";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {{"turret", "all"}, {"cargo", "all"}};
+                allowedPositions[] = {{"turret", "all"}, {"cargo", 1}};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2 {
@@ -457,8 +502,39 @@ class CfgVehicles {
                 shortName = "Lower";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {{"turret", "all"}, {"cargo", "all"}};
+                allowedPositions[] = {{"turret", "all"}, {"cargo", 1}};
                 intercom[] = {"CrewIntercom"};
+            };
+        };
+    };
+    class rhsusf_MATV_armed_base: rhsusf_MATV_base {};
+    class rhsusf_MATV_OGPK_base: rhsusf_MATV_armed_base {
+        class AcreRacks: AcreRacks {
+            class Rack_1: Rack_1 {
+                allowedPositions[] = {{"turret", {1}}, {"cargo", 1}};
+            };
+            class Rack_2: Rack_2 {
+                allowedPositions[] = {{"turret", {1}}, {"cargo", 1}};
+            };
+        };
+    };
+    class rhsusf_MATV_CROWS_base: rhsusf_MATV_armed_base {
+        class AcreRacks: AcreRacks {
+            class Rack_1: Rack_1 {
+                allowedPositions[] = {{"turret", {1}}, {"cargo", 0}};
+            };
+            class Rack_2: Rack_2 {
+                allowedPositions[] = {{"turret", {1}}, {"cargo", 0}};
+            };
+        };
+    };
+    class rhsusf_MATV_SOF_CROWS_base: rhsusf_MATV_CROWS_base {
+        class AcreRacks: AcreRacks {
+            class Rack_1: Rack_1 {
+                allowedPositions[] = {{"turret", {1}}, {"cargo", 1}};
+            };
+            class Rack_2: Rack_2 {
+                allowedPositions[] = {{"turret", {1}}, {"cargo", 1}};
             };
         };
     };
