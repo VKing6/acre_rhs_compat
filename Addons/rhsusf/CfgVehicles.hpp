@@ -27,13 +27,9 @@ class CfgVehicles {
                 allowedPositions[] = {"driver", "commander", "gunner"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver", "commander", "gunner"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -64,13 +60,9 @@ class CfgVehicles {
                 allowedPositions[] = {"gunner", {"ffv", {1}}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"gunner", {"ffv", {1}}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -101,13 +93,9 @@ class CfgVehicles {
                 allowedPositions[] = {"gunner"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"gunner"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -137,13 +125,9 @@ class CfgVehicles {
                 allowedPositions[] = {{"ffv", {1}}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {{"ffv", {1}}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -178,13 +162,9 @@ class CfgVehicles {
                 allowedPositions[] = {"commander", "gunner"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"commander", "gunner"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -218,13 +198,9 @@ class CfgVehicles {
                 allowedPositions[] = {"commander", "driver"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"commander", "driver"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -252,13 +228,9 @@ class CfgVehicles {
                 allowedPositions[] = {"commander", "gunner", {"turret", "all"}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"commander", "gunner", {"turret", "all"}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -293,13 +265,9 @@ class CfgVehicles {
                 allowedPositions[] = {"driver"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -326,13 +294,9 @@ class CfgVehicles {
                 allowedPositions[] = {"driver", {"cargo", 0, 1, 8}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver", {"cargo", 0, 1, 8}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -382,13 +346,9 @@ class CfgVehicles {
                 allowedPositions[] = {"crew", {"cargo", 0, 1, 4}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"crew", {"cargo", 0, 1, 4}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -425,13 +385,9 @@ class CfgVehicles {
                 allowedPositions[] = {"crew", {"cargo", 0}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"crew", {"cargo", 0}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -457,13 +413,9 @@ class CfgVehicles {
                 allowedPositions[] = {{"cargo", 1}, {"ffv", {0}}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {{"cargo", 1}, {"ffv", {0}}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -497,13 +449,9 @@ class CfgVehicles {
                 allowedPositions[] = {{"turret", "all"}, {"cargo", 1}};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {{"turret", "all"}, {"cargo", 1}};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -575,13 +523,9 @@ class CfgVehicles {
                 allowedPositions[] = {"driver", "copilot"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver", "copilot"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -614,13 +558,9 @@ class CfgVehicles {
                 allowedPositions[] = {"driver", "copilot"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver", "copilot"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -646,13 +586,9 @@ class CfgVehicles {
                 allowedPositions[] = {"crew"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"crew"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -677,13 +613,9 @@ class CfgVehicles {
                 allowedPositions[] = {"crew"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"crew"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -716,13 +648,9 @@ class CfgVehicles {
                 allowedPositions[] = {"driver", "copilot", "gunner"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver", "copilot", "gunner"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -755,13 +683,9 @@ class CfgVehicles {
                 allowedPositions[] = {"driver", "copilot", "gunner"};
                 intercom[] = {"CrewIntercom"};
             };
-            class Rack_2 {
+            class Rack_2: Rack_1 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver", "copilot", "gunner"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
@@ -785,7 +709,7 @@ class CfgVehicles {
             };
         };
         class AcreRacks {
-            class Rack_1 {
+            class Rack_2: Rack_1 {
                 displayName = "Upper Radio";
                 shortName = "Upper";
                 componentName = "ACRE_VRC103";
@@ -796,10 +720,6 @@ class CfgVehicles {
             class Rack_2 {
                 displayName = "Lower Radio";
                 shortName = "Lower";
-                componentName = "ACRE_VRC103";
-                mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver", "copilot", "gunner"};
-                intercom[] = {"CrewIntercom"};
             };
         };
     };
