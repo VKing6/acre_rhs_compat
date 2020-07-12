@@ -218,7 +218,9 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_crewIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
-                allowedPositions[] = {"driver", {"turret", {0}, {1}}};
+                allowedPositions[] = {"driver", "gunner", {"turret", {0}, {1}}};
+                limitedPositions[] = {{"cargo", "all"}};
+                numLimitedPositions = 1;
                 connectedByDefault = 1;
             };
         };
@@ -241,7 +243,9 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_crewIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
-                allowedPositions[] = {"driver", {"turret", {0}, {0,0}}};
+                allowedPositions[] = {"driver", "gunner", {"turret", {0}, {0,0}}};
+                limitedPositions[] = {{"cargo", "all"}};
+                numLimitedPositions = 1;
                 connectedByDefault = 1;
             };
         };
@@ -251,7 +255,7 @@ class CfgVehicles {
                 shortName = "Dash";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver"};
+                allowedPositions[] = {"driver", {"cargo", 6}};
                 intercom[] = {"CrewIntercom"};
             };
         };
@@ -263,13 +267,13 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_crewIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
-                allowedPositions[] = {"driver", {"turret", {0}, {0,0}}};
+                allowedPositions[] = {"driver", "gunner", "commander"}; // {"turret", {0}, {0,0}}
                 connectedByDefault = 1;
             };
             class PaxIntercom {
                 displayName = $STR_ACRE_sys_intercom_passengerIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
-                allowedPositions[] = {"driver", {"turret", {0}, {0,0}}, {"cargo", "all"}};
+                allowedPositions[] = {"driver", "gunner", "commander", {"cargo", "all"}}; //{"turret", {0}, {0,0}}
             };
         };
         class AcreRacks {
@@ -278,13 +282,16 @@ class CfgVehicles {
                 shortName = "Dash";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"driver"};
-                intercom[] = {"CrewIntercom"};
+                allowedPositions[] = {"driver", {"cargo", 2}};
+                intercom[] = {"CrewIntercom", "PaxIntercom"};
             };
-            class Rack_2: Rack_1 {
+            class Rack_2 {
                 displayName = "Rear Compartment";
                 shortName = "Rear";
-                allowedPositions[] = {{"turret", {0,0}}, {"cargo", "all"}};
+                componentName = "ACRE_VRC103";
+                mountedRadio = "ACRE_PRC117F";
+                allowedPositions[] = {"commander", {"cargo", "all"}};
+                disabledPositions[] = {{"cargo", 2}};
                 intercom[] = {"PaxIntercom"};
             };
         };
@@ -295,7 +302,7 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_crewIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
-                allowedPositions[] = {"crew", {"turret", "all"}};
+                allowedPositions[] = {"crew", {"turret", "all"}, {"ffv", {0}, {1}}};
                 connectedByDefault = 1;
             };
         };
@@ -305,7 +312,7 @@ class CfgVehicles {
                 shortName = "R.Up";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"gunner", "commander", {"turret", "all"}};
+                allowedPositions[] = {"gunner"};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2: Rack_1 {
@@ -331,6 +338,7 @@ class CfgVehicles {
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
                 allowedPositions[] = {"gunner", "commander", {"turret", "all"}};
+                disabledPositions[] = {{"turret", {2}, {3}}};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2: Rack_1 {
@@ -412,7 +420,7 @@ class CfgVehicles {
                 shortName = "R.Up";
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
-                allowedPositions[] = {"gunner", "commander"};
+                allowedPositions[] = {"crew"};
                 intercom[] = {"CrewIntercom"};
             };
             class Rack_2: Rack_1 {
