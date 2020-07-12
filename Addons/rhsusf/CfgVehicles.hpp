@@ -526,11 +526,11 @@ class CfgVehicles {
         class AcreRacks {};
     };
 
-    // HMMWV
-    class rhsusf_hmmwe_base: MRAP_01_base_F {
-        class AcreIntercoms {};
-        class AcreRacks {};
-    };
+    // // HMMWV
+    // class rhsusf_hmmwe_base: MRAP_01_base_F {
+    //     class AcreIntercoms {};
+    //     class AcreRacks {};
+    // };
 
     // M142 HIMARS
     class rhsusf_himars_base: Truck_01_base_F {
