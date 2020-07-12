@@ -5,5 +5,5 @@ releases/*
 keys/*
 .hemtt/local
 ####
-
+tools/*
 *.pbo
