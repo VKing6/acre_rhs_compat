@@ -1,5 +1,5 @@
 name = "VKing's ACRE RHS Compatibility"
 prefix = "vk_acre_rhs_compat"
-version = "0.1.0"
+version = "0.2.1"
 author = "VKing"
 files = ["mod.cpp"]
