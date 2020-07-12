@@ -192,7 +192,10 @@ class CfgVehicles {
             class PaxIntercom {
                 displayName = $STR_ACRE_sys_intercom_passengerIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
-                allowedPositions[] = {"crew", {"turret", "all"}};
+                allowedPositions[] = {{"turret", {3}, {4}, {5}}};
+                limitedPositions[] = {"driver", "gunner", {"turret", {0,0}, {1}, {2}}};
+                numLimitedPositions = 2;
+                connectedByDefault = 1;
             };
         };
         class AcreRacks {
@@ -267,13 +270,18 @@ class CfgVehicles {
             class CrewIntercom {
                 displayName = $STR_ACRE_sys_intercom_crewIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortCrewIntercom;
-                allowedPositions[] = {"driver", "gunner", "commander"}; // {"turret", {0}, {0,0}}
+                allowedPositions[] = {"driver", "gunner", "commander"};
+                limitedPositions[] = {{"cargo", "all"}};
+                numLimitedPositions = 1;
                 connectedByDefault = 1;
             };
             class PaxIntercom {
                 displayName = $STR_ACRE_sys_intercom_passengerIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
-                allowedPositions[] = {"driver", "gunner", "commander", {"cargo", "all"}}; //{"turret", {0}, {0,0}}
+                allowedPositions[] = {{"cargo", "all"}};
+                limitedPositions[] = {"driver", "gunner", "commander"};
+                numLimitedPositions = 2;
+                connectedByDefault = 1;
             };
         };
         class AcreRacks {
@@ -283,7 +291,7 @@ class CfgVehicles {
                 componentName = "ACRE_VRC103";
                 mountedRadio = "ACRE_PRC117F";
                 allowedPositions[] = {"driver", {"cargo", 2}};
-                intercom[] = {"CrewIntercom", "PaxIntercom"};
+                intercom[] = {"CrewIntercom"};
             };
             class Rack_2 {
                 displayName = "Rear Compartment";
@@ -362,7 +370,10 @@ class CfgVehicles {
             class PaxIntercom {
                 displayName = $STR_ACRE_sys_intercom_passengerIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
-                allowedPositions[] = {"crew", {"turret", {1}, {2}}, {"cargo", "all"}};
+                allowedPositions[] = {{"cargo", "all"}};
+                limitedPositions[] = {"crew", {"turret", {1}, {2}}};
+                numLimitedPositions = 2;
+                connectedByDefault = 1;
             };
         };
         class AcreRacks {
@@ -579,7 +590,10 @@ class CfgVehicles {
             class PaxIntercom {
                 displayName = $STR_ACRE_sys_intercom_passengerIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
-                allowedPositions[] = {"crew", {"cargo", "all"}, {"ffv", "all"}};
+                allowedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
+                limitedPositions[] = {"crew"};
+                numLimitedPositions = 2;
+                connectedByDefault = 1;
             };
         };
         class AcreRacks {
@@ -614,7 +628,10 @@ class CfgVehicles {
             class PaxIntercom {
                 displayName = $STR_ACRE_sys_intercom_passengerIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
-                allowedPositions[] = {"crew", {"cargo", "all"}, {"ffv", "all"}};
+                allowedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
+                limitedPositions[] = {"crew"};
+                numLimitedPositions = 2;
+                connectedByDefault = 1;
             };
         };
         class AcreRacks {
@@ -703,7 +720,10 @@ class CfgVehicles {
             class PaxIntercom {
                 displayName = $STR_ACRE_sys_intercom_passengerIntercom;
                 shortName = $STR_ACRE_sys_intercom_shortPassengerIntercom;
-                allowedPositions[] = {"crew", {"cargo", "all"}, {"ffv", "all"}};
+                allowedPositions[] = {{"cargo", "all"}, {"ffv", "all"}};
+                limitedPositions[] = {"crew"};
+                numLimitedPositions = 2;
+                connectedByDefault = 1;
             };
         };
         class AcreRacks {
